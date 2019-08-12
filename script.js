@@ -1,4 +1,2 @@
-var userInput = document.getElementById("#userInput");
-var list = document.querySelectorAll("li");
+var input = document.getElementById("userinput");
 
-for(var i =0; i)
