@@ -1,27 +1,64 @@
-body{
-    background-color: cadetblue;
+body {
+  background-color: cadetblue;
 }
 
 .card-img-top {
-    width: 10vw;
-    height: 10vw;
-    object-fit: cover;
+  width: 10vw;
+  height: 10vw;
+  object-fit: cover;
 }
 
-.backToLists{
-    font-weight: 10em;
-    font-size: 1.2rem;
-    color: white;
+#inputs {
+
+  height: 100%;
+
 }
 
-a:hover{
-    text-decoration: none;
-    color: yellow ;
+#enterButton {
+  position: relative ;
+  top:50%;
+  right: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background: blue;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 200%;
+
 }
 
-.list-group{
-    max-height: 400px;
-    margin-bottom: 10px;
-    overflow-y:auto;
-    -webkit-overflow-scrolling: touch;
+.resize {
+
+  width: 85%;
+  margin-right: 0;
+
 }
+
+
+.backToLists {
+  font-weight: 10em;
+  font-size: 1.2rem;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: yellow;
+}
+
+.list-group {
+  max-height: 400px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.blue {
+    color: blue;
+}
+
