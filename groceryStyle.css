@@ -20,18 +20,20 @@ body {
   right: 0;
   cursor: pointer;
   border-radius: 50%;
-  background: blue;
-  border: none;
-  color: white;
-  font-weight: bold;
-  font-size: 200%;
-
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid blue;
+  outline: none;
+  background-color: lightseagreen;
+  color: darkblue;
 }
 
 .resize {
 
   width: 85%;
   margin-right: 0;
+  margin-bottom: 5%;
 
 }
 
@@ -58,7 +60,17 @@ a:hover {
     text-decoration: line-through;
 }
 
-.blue {
+.blueTxt {
     color: blue;
+}
+
+.list-group {
+  margin-left: 15%;
+}
+
+.deleteBtn {
+  margin-left: 10%;
+
+
 }
 

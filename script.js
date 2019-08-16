@@ -7,7 +7,7 @@ var li = document.getElementsByTagName("li");
 function createListElement() {
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(input.value));
-    li.classList.add("blue");
+    li.classList.add("blueTxt");
     ul.appendChild(li);
     input.value = "";
 
@@ -21,6 +21,7 @@ function createListElement() {
     // Create a new delete button to remove item from the list
     var button = document.createElement("button");
     button.appendChild(document.createTextNode("Delete!"));
+    button.classList.add("deleteBtn")
     li.appendChild(button);
     button.onclick = removeParent;
 }
