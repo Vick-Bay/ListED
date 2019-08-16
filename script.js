@@ -7,7 +7,7 @@ var li = document.getElementsByTagName("li");
 function createListElement() {
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(input.value));
-    li.classList.add("blueTxt");
+    li.classList.add("listItem");
     ul.appendChild(li);
     input.value = "";
 

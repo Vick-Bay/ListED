@@ -29,7 +29,7 @@ body {
   color: darkblue;
 }
 
-.resize {
+#userInput {
 
   width: 85%;
   margin-right: 0;
@@ -60,17 +60,24 @@ a:hover {
     text-decoration: line-through;
 }
 
-.blueTxt {
+.listItem {
     color: blue;
+    border: 1px solid lightblue;
+    border-color:teal;
+    margin-bottom: 2%;
+    border-radius: 5px;
 }
 
 .list-group {
-  margin-left: 15%;
+  margin-left: 4%;
+  width: 85%;
+  
 }
 
 .deleteBtn {
-  margin-left: 10%;
-
-
+    margin-left: 15%;
+    border-radius: 5px;
+    background-color:lightblue;
+    color: green;
 }
 
