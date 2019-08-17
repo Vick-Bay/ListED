@@ -75,9 +75,10 @@ a:hover {
 }
 
 .deleteBtn {
-    margin-left: 15%;
+   
     border-radius: 5px;
     background-color:lightblue;
     color: green;
+    float: right;
 }
 
