@@ -1,30 +1,62 @@
 var input = document.getElementById("userInput");
 var button = document.getElementById("enterButton");
-var ul = document.querySelector("ul");
-var li = document.getElementsByTagName("li");
+var ulFirst = document.querySelector("#firstList");
+var ulComplete = document.querySelector("#listCompleted")
+var deleteButton = document.getElementById("deleteButton");
+var divLine = document.getElementById("compList");
 
+deleteButton.hidden = true;
 
-function createListElement() {
+function createFirstListElement() {
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(input.value));
     li.classList.add("listItem");
-    ul.appendChild(li);
+    ulFirst.appendChild(li);
     input.value = "";
+    firstList(li);
+     
+}
+
+function firstList (listFirst) {
 
     // Crossed out when clicked
+    listFirst.addEventListener("click", function () {
+        listFirst.classList.add("done");
 
-    li.addEventListener("click", function () {
-        li.classList.toggle("done");
+        // move from one ul to the other
+        ulComplete.appendChild(listFirst);
+        createDoneListElement(listFirst);
     });
 
-
-    // Create a new delete button to remove item from the list
-    var button = document.createElement("button");
-    button.appendChild(document.createTextNode("Delete!"));
-    button.classList.add("deleteBtn")
-    li.appendChild(button);
-    button.onclick = removeParent;
 }
+
+function createDoneListElement(list) {
+    
+    ulComplete.classList.add("doneList");
+    divLine.classList.add("completedList");
+    deleteButton.hidden = false;
+    
+    list.addEventListener("click", function () {
+        list.classList.remove("done");
+
+        // move from one ul to the other
+        ulFirst.appendChild(list);
+        firstList(list);
+
+
+        if(!ulComplete.hasChildNodes()){
+            ulComplete.classList.remove("doneList");
+            deleteButton.hidden = true;
+            divLine.classList.remove("completedList");
+        }
+
+    }); 
+
+
+
+    }
+    
+
 
 function removeParent(event) {
     event.target.parentNode.remove();
@@ -32,18 +64,20 @@ function removeParent(event) {
 
 function addListAfterClick() {
     if (input.value.length > 0) {
-        createListElement();
+        createFirstListElement();
     }
 }
 
 function addListAfterKeypress(event) {
     if (input.value.length > 0 && event.keyCode === 13) {
-        createListElement();
+        createFirstListElement();
     }
 }
 
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
+
+
 
 

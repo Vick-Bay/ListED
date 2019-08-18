@@ -54,6 +54,8 @@ a:hover {
   margin-bottom: 10px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  margin-left: 4%;
+  width: 85%;
 }
 
 .done {
@@ -68,11 +70,6 @@ a:hover {
     border-radius: 5px;
 }
 
-.list-group {
-  margin-left: 4%;
-  width: 85%;
-  
-}
 
 .deleteBtn {
    
@@ -81,4 +78,22 @@ a:hover {
     color: green;
     float: right;
 }
+
+.doneList {
+ 
+  padding-top: 10px;
+  margin-top: 30px;
+  max-height: 400px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-left: 4%;
+  width: 85%;
+ 
+}
+
+.completedList {
+  border-top: 3px solid cadetblue;
+}
+
 
