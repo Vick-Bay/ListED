@@ -96,4 +96,15 @@ a:hover {
   border-top: 3px solid cadetblue;
 }
 
+#deleteButton {
+  background: none;
+  border: none;
+  color: cadetblue;
+  font-weight: bold;
+  float: left;  
+  margin-left: 4%;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
 

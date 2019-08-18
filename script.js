@@ -35,13 +35,14 @@ function createDoneListElement(list) {
     ulComplete.classList.add("doneList");
     divLine.classList.add("completedList");
     deleteButton.hidden = false;
-    
+
     list.addEventListener("click", function () {
         list.classList.remove("done");
 
         // move from one ul to the other
         ulFirst.appendChild(list);
         firstList(list);
+
 
 
         if(!ulComplete.hasChildNodes()){
@@ -52,15 +53,31 @@ function createDoneListElement(list) {
 
     }); 
 
+    deleteButton.onclick = function () {
 
+            var first = ulComplete.firstElementChild; 
+            while (first) { 
+                first.remove(); 
+                first = ulComplete.firstElementChild; 
+            }
+             
+            if(!ulComplete.hasChildNodes()){
+                ulComplete.classList.remove("doneList");
+                deleteButton.hidden = true;
+                divLine.classList.remove("completedList");
+            }
+        
+            
+        }
 
-    }
+}
     
-
 
 function removeParent(event) {
     event.target.parentNode.remove();
 }
+
+
 
 function addListAfterClick() {
     if (input.value.length > 0) {
