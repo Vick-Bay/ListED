@@ -62,12 +62,22 @@ a:hover {
     text-decoration: line-through;
 }
 
+
 .listItem {
     color: blue;
     border: 1px solid lightblue;
     border-color:teal;
     margin-bottom: 2%;
     border-radius: 5px;
+    transition: all 1s ease-out;
+    width: 100%;
+}
+
+.listItem:active {
+
+  background-color: cadetblue;
+  width: 0;
+  opacity: 1.0;
 }
 
 
