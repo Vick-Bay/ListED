@@ -9,14 +9,12 @@ body {
 }
 
 #inputs {
-
   height: 100%;
-
 }
 
 #enterButton {
-  position: relative ;
-  top:50%;
+  position: relative;
+  top: 50%;
   right: 0;
   cursor: pointer;
   border-radius: 50%;
@@ -30,13 +28,10 @@ body {
 }
 
 #userInput {
-
   width: 85%;
   margin-right: 0;
   margin-bottom: 5%;
-
 }
-
 
 .backToLists {
   font-weight: 10em;
@@ -59,38 +54,27 @@ a:hover {
 }
 
 .done {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
-
 .listItem {
-    color: blue;
-    border: 1px solid lightblue;
-    border-color:teal;
-    margin-bottom: 2%;
-    border-radius: 5px;
-    transition: all 1s ease-out;
-    width: 100%;
+  color: blue;
+  border: 1px solid lightblue;
+  border-color: teal;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  transition: all 1s ease-out;
+  width: 100%;
 }
 
 .listItem:active {
-
   background-color: cadetblue;
   width: 0;
-  opacity: 1.0;
+  opacity: 1;
 }
 
-
-.deleteBtn {
-   
-    border-radius: 5px;
-    background-color:lightblue;
-    color: green;
-    float: right;
-}
 
 .doneList {
- 
   padding-top: 10px;
   margin-top: 30px;
   max-height: 400px;
@@ -99,7 +83,6 @@ a:hover {
   -webkit-overflow-scrolling: touch;
   margin-left: 4%;
   width: 85%;
- 
 }
 
 .completedList {
@@ -111,10 +94,9 @@ a:hover {
   border: none;
   color: cadetblue;
   font-weight: bold;
-  float: left;  
+  float: left;
   margin-left: 4%;
   padding: 0;
   outline: none;
   cursor: pointer;
 }
-
