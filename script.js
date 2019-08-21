@@ -26,6 +26,7 @@ function createFirstListElement() {
 
 //Function to listen when lis are clicked
 function firstListElement(li) {
+
   // Crossed out when clicked
   li.addEventListener("click", function() {
     li.classList.add("done");
@@ -38,6 +39,8 @@ function firstListElement(li) {
 
 //Function to listen when crossed out lis are clicked
 function createDoneListElement(li) {
+
+    console.log(li);
   ulComplete.classList.add("doneList");
   divLine.classList.add("completedList");
   deleteButton.hidden = false;
@@ -49,7 +52,7 @@ function createDoneListElement(li) {
 
     // move from one ul to the other
     ulFirst.appendChild(li);
-    firstList(li);
+    firstListElement(li);
 
     //to check if crossed-out list is empty
     if (!ulComplete.hasChildNodes()) {
